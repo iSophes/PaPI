@@ -10,7 +10,7 @@ pep517 = "0.13.1"
 speechrecognition = "^3.10.1"
 PyAudio = "0.2.14"
 Pillow = "10.2.0"
-tk = ""
+tk = "0.1.0"
 pyttsx3 = "^2.90"
 
 [tool.pyright]
