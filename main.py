@@ -21,15 +21,16 @@ Images = [[
     ]]
 
 def Count():
-  for i in range (2):
-    TextLabel.config(text="Say what the image is! ("+(i+1)+")")
-  
+   for i in range(4):
+    Number = 3
+    TextLabel.config(text="Say what the image is! ("+str((Number - i))+")")
+    time.sleep(1)
 
 def StartInput():
   print("woo")
   TextLabel.config(text="Say what the image is!")
   time.sleep(1)
-  Thread(group=None, target=Count, args=[])
+  Thread(group = None, target=Count, args=[]).start()
   InputGiven = InputSpeech()
 
   Submit(InputGiven)
@@ -114,7 +115,8 @@ TextLabel = Label(root, text="Say what the image is!")
 TextLabel.place(relx=0.5, rely=0.1, anchor=CENTER)
 
 time.sleep(1)
-StartInput()
+StartInputThread = Thread(group = None, target=StartInput, args=[])
+StartInputThread.start()
 
 root.mainloop()
 

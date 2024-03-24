@@ -24,12 +24,12 @@ def ConvertToText(Audio):
 def InputSpeech():
 
   with SpeechRecognition.Microphone() as Mic:
-    Recognizer.adjust_for_ambient_noise(Mic, 5)
+    Recognizer.adjust_for_ambient_noise(Mic, 3)
     Audio = Recognizer.listen(Mic)
     Text = ConvertToText(Audio)
 
     while not Text or Text == "Fail":
-      Recognizer.adjust_for_ambient_noise(Mic, 5)
+      Recognizer.adjust_for_ambient_noise(Mic, 3)
       Audio = Recognizer.listen(Mic)
       Text = ConvertToText(Audio)
 
