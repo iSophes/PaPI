@@ -8,17 +8,18 @@ import time
 from SpeechConverter import InputSpeech
 
 Images = [[
-    "duck",
-    "Images/Duck.png",
-    ["Quack", "Kaczka"],
+  "duck",
+  "Images/Duck.png",
+  ["Quack"],
 ], [
   "cow", 
   "Images/cow.png", 
-  ["Moo"]], 
-    ["pig", 
-     "Images/pig.png", 
-     ["Oink"]
-    ]]
+  ["Moo"]
+], [
+  "pig", 
+  "Images/pig.png", 
+  ["Oink"]
+]]
 
 def Count():
    for i in range(4):
